@@ -1,0 +1,77 @@
+
+
+
+
+
+
+
+MODULES:
+
+-----------------------------------------------------------------
+Hedge
+
+public:
+private:
+    Hedge *_twin
+    Hedge *_next
+    Hedge *_prev
+    Face *_face
+    Vertex *_target
+    (maybe) Vertex *_source
+
+	double _slope
+
+-----------------------------------------------------------------
+Face
+
+public:
+private:
+	Hedge *_h
+
+-----------------------------------------------------------------
+Vertex
+
+public:
+private:
+	Hedge *_h
+
+-----------------------------------------------------------------
+Dcel
+
+Invariants:
+	1. always a planar embedding
+
+public:
+	Dcel()
+    Dcel(string dcel_json) // optimize for interoperability
+    					   // maybe import as a string?
+                           // maybe provide functions that
+                           //	allow importing from common
+                           //   libraries?
+                           // Also we want to export to common
+                           //	libraries
+
+	Dcel(const Dcel &dcel)
+
+	~Dcel()
+
+	/*
+     * Build takes the current Vertex list and Hedge list and
+     * 	constructs faces.
+     */
+	void build()
+
+	/*
+     * Returns a json string that is equivalent to the Dcel
+     */
+	string to_json()
+	Vertex add_vertex(double x, double y)
+    Hedge add_edge(Vertex v1, Vertex v2)
+
+private:
+	Vector<Hedge> hs
+    Vector<Vertex> vs
+    Vector<Face> fs
+
+	(maybe) List<List<Vertex>> adjacency_list
+    (maybe) Vector<Vector<Vertex>> adjacency_matrix
