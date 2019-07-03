@@ -3,6 +3,21 @@
 
 
 
+Authors: Cole Koester
+		 Christopher Choy
+
+INTRODUCTION:
+	Dcel stands for Doubly Connected Edge List. It is a half-edge
+    data strucure. 
+
+	A half-edge (which corresponds to the class Hedge) is just a
+    directed edge that stores local data about the graph. In a
+    Hedge, we store references to various local data such as
+    the incident vertices, faces, and (importantly) its twin
+    Hedge.
+
+	It was first suggested in the paper Muller, D. E.; Preparata,
+    F. P. "Finding the Intersection of Two Convex Polyhedra"
 
 
 MODULES:

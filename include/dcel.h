@@ -5,7 +5,6 @@
 #include "../include/face.h"
 #include "../include/hedge.h"
 
-
 class Dcel {
  public:
     Dcel();
