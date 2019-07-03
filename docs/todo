@@ -12,7 +12,7 @@
 
 0 add and remove data
 
-0 IMPORTANT: remove verbose pointers. Instead, just use
+0 IMPORTANT: remove pointers? Instead, just use
     strings and a std::map for every item. (I think this
     will be easier than silly pointer management, but
     we should talk about it)
