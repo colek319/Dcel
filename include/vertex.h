@@ -12,7 +12,7 @@ class Hedge;
 
 class Vertex {
 public:    
-	Vertex(double x, double y, Hedge *h);
+    Vertex(double x, double y, Hedge *h);
     Vertex(const Vertex &v);
 
     double x();
@@ -20,7 +20,7 @@ public:
     Hedge *h();
 
 private:
-	double _x, _y;
+    double _x, _y;
     Hedge *_h; 
 };
 

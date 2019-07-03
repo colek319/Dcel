@@ -7,7 +7,7 @@
 class Hedge {
  public:
     Hedge();
-	Hedge(Hedge  *twin,
+    Hedge(Hedge  *twin,
           Hedge  *prev,
           Hedge  *next,
           Vertex *target,

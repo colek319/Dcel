@@ -13,19 +13,19 @@
 0 add and remove data
 
 0 IMPORTANT: remove verbose pointers. Instead, just use
-	strings and a std::map for every item. (I think this
+    strings and a std::map for every item. (I think this
     will be easier than silly pointer management, but
     we should talk about it)
 
 0 understand advanced features of c++ to the degree that
-	we don't feel like our code is spaghetti code
+    we don't feel like our code is spaghetti code
 
 0 represent a polygon and do things with it
 
 0 get convex hull of a pointset
 
 0 test as a data structure in a c++ visualization (voronoi
-	diagram, US map where we can select states and see data,
+    diagram, US map where we can select states and see data,
     anything we can think of realy.
 
 0 build language (maybe hold off)

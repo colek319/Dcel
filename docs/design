@@ -4,19 +4,19 @@
 
 
 Authors: Cole Koester
-		 Christopher Choy
+         Christopher Choy
 
 INTRODUCTION:
-	Dcel stands for Doubly Connected Edge List. It is a half-edge
+    Dcel stands for Doubly Connected Edge List. It is a half-edge
     data strucure. 
 
-	A half-edge (which corresponds to the class Hedge) is just a
+    A half-edge (which corresponds to the class Hedge) is just a
     directed edge that stores local data about the graph. In a
     Hedge, we store references to various local data such as
     the incident vertices, faces, and (importantly) its twin
     Hedge.
 
-	It was first suggested in the paper Muller, D. E.; Preparata,
+    It was first suggested in the paper Muller, D. E.; Preparata,
     F. P. "Finding the Intersection of Two Convex Polyhedra"
 
 
@@ -34,59 +34,59 @@ private:
     Vertex *_target
     (maybe) Vertex *_source
 
-	double _slope
+    double _slope
 
 -----------------------------------------------------------------
 Face
 
 public:
 private:
-	Hedge *_h
+    Hedge *_h
 
 -----------------------------------------------------------------
 Vertex
 
 public:
 private:
-	Hedge *_h
+    Hedge *_h
 
 -----------------------------------------------------------------
 Dcel
 
 Invariants:
-	1. always a planar embedding
+    1. always a planar embedding
 
 public:
-	Dcel()
+    Dcel()
     Dcel(string dcel_json) // optimize for interoperability
-    					   // maybe import as a string?
+                           // maybe import as a string?
                            // maybe provide functions that
-                           //	allow importing from common
+                           //   allow importing from common
                            //   libraries?
                            // Also we want to export to common
-                           //	libraries
+                           //   libraries
 
-	Dcel(const Dcel &dcel)
+    Dcel(const Dcel &dcel)
 
-	~Dcel()
+    ~Dcel()
 
-	/*
+    /*
      * Build takes the current Vertex list and Hedge list and
-     * 	constructs faces.
+     *  constructs faces.
      */
-	void build()
+    void build()
 
-	/*
+    /*
      * Returns a json string that is equivalent to the Dcel
      */
-	string to_json()
-	Vertex add_vertex(double x, double y)
+    string to_json()
+    Vertex add_vertex(double x, double y)
     Hedge add_edge(Vertex v1, Vertex v2)
 
 private:
-	Vector<Hedge> hs
+    Vector<Hedge> hs
     Vector<Vertex> vs
     Vector<Face> fs
 
-	(maybe) List<List<Vertex>> adjacency_list
+    (maybe) List<List<Vertex>> adjacency_list
     (maybe) Vector<Vector<Vertex>> adjacency_matrix

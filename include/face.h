@@ -13,7 +13,7 @@ class Hedge;
 class Face {
  public:
     Face();
-	Face(Hedge *h);
+    Face(Hedge *h);
 
     Hedge *h();
     
